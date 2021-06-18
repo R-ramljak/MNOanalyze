@@ -48,18 +48,18 @@ A list object with 7 elements, `area.params`, containing the specified parameter
 Generates a fully synthetic mobile phone population and geographical area.
 }
 \examples{
-# tile.num <- 100 # number of tiles
+tile.num <- 100 # number of tiles
 base.tile.size <- 100 # size of a single tile
 city.num <- 1 # number of single cities
 city.size <- 10 # size of a single city polygon
 hole.num <- 1 # number of single holes
 hole.size <- 1 # size of a single hole polygon
-pop.dist.df <- tibble(type = c("Urban", "Hole", "Rural"),
-                      expression = c("ReIns::rtpareto(shape = 0.05, scale = 10, endpoint = 200",
-                                    "ReIns::rtpareto(shape = 0.7, scale = 0.1, endpoint = 20",
-                                    "ReIns::rtpareto(shape = 0.5, scale = 0.1, endpoint = 100"))
-                                          area <- pop_gen(tile.num, base.tile.size,
-                                                  city.num, city.size, city.shape = "SQUARE",
-                                                  hole.num, hole.size, hole.shape = "SQUARE",
-                                                  pop.dist.df)
+pop.dist.df <- tibble::tibble(type = c("Urban", "Hole", "Rural"),
+                              expression = c("ReIns::rtpareto(shape = 0.05, scale = 10, endpoint = 200",
+                                             "ReIns::rtpareto(shape = 0.7, scale = 0.1, endpoint = 20",
+                                             "ReIns::rtpareto(shape = 0.5, scale = 0.1, endpoint = 100"))
+area <- pop_gen(tile.num, base.tile.size,
+               city.num, city.size, city.shape = "SQUARE",
+               hole.num, hole.size, hole.shape = "SQUARE",
+               pop.dist.df)
 }

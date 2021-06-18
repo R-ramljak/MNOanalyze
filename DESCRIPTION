@@ -11,7 +11,9 @@ BugReports: https://github.com/R-ramljak/MNOanalyze/issues
 Depends:
     R (>= 3.5.0)
 Imports:
-    tidyverse,
+    dplyr,
+    tibble,
+    purrr,
     data.table,
     sf,
     raster,
@@ -23,7 +25,8 @@ Imports:
     scattermore,
     grid,
     gridExtra,
-    ggrepel
+    ggrepel,
+    ReIns
 Suggests:
     knitr,
     rmarkdown,
